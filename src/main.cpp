@@ -55,6 +55,7 @@ int main()
           double speed = std::stod(j[1]["speed"].get<std::string>());
           double angle = std::stod(j[1]["steering_angle"].get<std::string>());
           double steer_value;
+          steer_value=0;
           pid.UpdateError(cte);
           steer_value=steer_value-pid.TotalError();
           /*
